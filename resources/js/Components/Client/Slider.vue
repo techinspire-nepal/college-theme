@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue';
-const isOpen = ref(false)
+
 
 
 /*=========== Carousel ========== */
@@ -48,68 +48,31 @@ onMounted(() => {
 
      <!-- Carousel -->
 
-      <section class="relative w-full h-['500px'] bg-black overflow-hidden" >
-        <div style="height:100vh">
-        </div>
-        <!-- slides -->
-         <div v-for="(slide,index) in slides"
-         :key="index"
-         class="absolute h-['700px'] inset-0 transtion-opacite duration-700"
-         :class="currentSlide === index ? 'opacity-100' : 'opacity-0'"
-         >
-         
-         <!-- image -->
-          <img 
-          :src="slide.image"
-          :alt="slide.title"
-          class="w-full h-['100vh'] object-cover"
-          />
-
-          <!-- overlay -->
-           <div class="absolute inset-0 bg-black/50"></div>
-
-           <!-- content -->
-            <div class="absolute inset-0 flex flex-col justify-center items-center text-white px-4">
-              <h1 class="text-4xl md:text-6xl font-bold mb-4">
-                {{ slide.title }}
-              </h1>
-
-              <p class="text-lg md:text-2xl mb-6">
-                {{ slide.description }}
-              </p>
-
-              <button class="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold transition">
-                Explore More
-              </button>
-            </div>
-         </div>
-
-         <!-- Previous Button -->
-          <button @click="prevSlide" 
-          class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-3 rounded-full"
-          >
-          <i class="bi bi-chevron-left text-2xl"></i>
-          </button>
-
-          <!-- Next Button -->
-           <button @click="nextSlide"
-           class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-3 rounded-full"
-           >
-           <i class="bi bi-chevron-right text-2xl"></i>
-           </button>
-
-           <!-- Dots -->
-            <div class="absolute bottom-5 left-1/2 -translate-x-1/2 flex space-x-3">
-              <button
-              v-for="(slide,index) in slides"
-              :key="index"
-              @click="currentSlide=index"
-              class="w-3 h-3 rounded-full"
-              :class="currentSlide === index ? 'bg-yellow-400' : 'bg-white'"
-              >
-              </button>
-            </div>
-      </section>
+   <section class="relative h-screen overflow-hidden">
+  <video
+    autoplay
+    muted
+    loop
+    class="absolute top-0 left-0 w-full h-full object-cover"
+  >
+    <source src="video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
+  <div class="relative z-10 flex items-center justify-center h-full">
+    <div class="text-center text-white px-4">
+      <h1 class="text-5xl font-bold mb-4">Welcome to Our Website</h1>
+      <p class="text-xl mb-6">Experience the best services with us</p>
+      <a
+        href="#"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Get Started
+      </a>
+    </div>
+  </div>
+</section>   
+  
 </template>
 <style scoped>
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
