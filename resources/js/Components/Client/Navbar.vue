@@ -44,7 +44,7 @@ const newsText = ref(
 
         <!-- Logo -->
         <div class="flex items-center gap-4">
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8e/Nepal_Academy_of_Science_and_Technology_logo.png/220px-Nepal_Academy_of_Science_and_Technology_logo.png"
+          <img src="@/assets/logoschool.png"
                class="h-16">
 
           <div>
