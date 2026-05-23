@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue';
-import video from "@/assets/video.mp4"
+import video from "@/assets/college.mp4"
 
 </script>
 <template>
