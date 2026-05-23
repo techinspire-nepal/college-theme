@@ -15,7 +15,7 @@ import video from "@/assets/video.mp4"
   playsinline
   class="absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 z-[-2]"
 >
-  <source src="@/assets/video.mp4" type="video/mp4" />
+  <source src="@/assets/college.mp4" type="video/mp4" />
 </video>
   <!-- Overlay -->
     <div class="absolute inset-0 bg-black/60"></div>
